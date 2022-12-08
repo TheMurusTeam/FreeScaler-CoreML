@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="FSMainWindowController" customModule="FreeScaler" customModuleProvider="target">
+            <connections>
+                <outlet property="droplabelview" destination="ml2-6U-4d6" id="IWe-cC-uJ1"/>
+                <outlet property="mainview" destination="1J2-wB-ffc" id="ePp-pX-TAj"/>
+                <outlet property="waitlabel" destination="1Rp-m2-TzB" id="vZz-yg-XMR"/>
+                <outlet property="waitprogr" destination="6jq-3o-Ucq" id="Ws7-m7-dZ3"/>
+                <outlet property="waitwin" destination="yyE-Ox-Cnj" id="at4-tt-3Aq"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="FreeScaler 2" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" frameAutosaveName="mainwindow" animationBehavior="default" titlebarAppearsTransparent="YES" id="F0z-JX-Cv5" userLabel="Main Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="595" y="400" width="670" height="481"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+            <value key="minSize" type="size" width="618" height="481"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="670" height="481"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="1J2-wB-ffc" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="670" height="481"/>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="ml2-6U-4d6" userLabel="droplabel View">
+                        <rect key="frame" x="210" y="116" width="250" height="250"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bQD-Cq-Ydm" userLabel="drophereimg">
+                                <rect key="frame" x="75" y="76" width="100.5" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="square.and.arrow.down" catalog="system" id="C3m-Cg-Vw0"/>
+                            </imageView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1l-8u-caW">
+                                <rect key="frame" x="41" y="30" width="168" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Import From Finder..." bezelStyle="rounded" alignment="center" controlSize="large" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Qub-Dd-OJ3">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bezelColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickImport:" target="-2" id="HuP-TJ-KhL"/>
+                                </connections>
+                            </button>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="COL-9v-zKw" userLabel="drop view" customClass="DropView" customModule="FreeScaler" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </customView>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NwC-fo-enN">
+                                <rect key="frame" x="43" y="180" width="165" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" alignment="center" title="Drop file or folder here" id="88J-8N-ljW">
+                                    <font key="font" metaFont="systemBlack" size="20"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="250" id="7OX-UJ-xmA"/>
+                            <constraint firstAttribute="height" constant="250" id="Xho-tL-RNq"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="1J2-wB-ffc" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="9Wi-ur-geS"/>
+                    <constraint firstItem="1J2-wB-ffc" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="9zd-Yq-zL5"/>
+                    <constraint firstItem="ml2-6U-4d6" firstAttribute="centerX" secondItem="se5-gp-TjO" secondAttribute="centerX" id="En2-Qg-rni"/>
+                    <constraint firstAttribute="trailing" secondItem="1J2-wB-ffc" secondAttribute="trailing" id="G9M-f1-tE8"/>
+                    <constraint firstAttribute="bottom" secondItem="1J2-wB-ffc" secondAttribute="bottom" id="MZh-nl-KpM"/>
+                    <constraint firstItem="ml2-6U-4d6" firstAttribute="centerY" secondItem="se5-gp-TjO" secondAttribute="centerY" id="mmc-8a-mUF"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="177" y="173.5"/>
+        </window>
+        <window allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" id="yyE-Ox-Cnj" userLabel="Wait Window">
+            <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="850" y="486" width="281" height="141"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1512" height="944"/>
+            <value key="minSize" type="size" width="281" height="203"/>
+            <value key="maxSize" type="size" width="281" height="203"/>
+            <view key="contentView" id="7gI-Uk-YPP">
+                <rect key="frame" x="0.0" y="0.0" width="281" height="141"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <progressIndicator fixedFrame="YES" maxValue="100" indeterminate="YES" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="6jq-3o-Ucq">
+                        <rect key="frame" x="124" y="82" width="32" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </progressIndicator>
+                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Rp-m2-TzB">
+                        <rect key="frame" x="18" y="6" width="245" height="63"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" selectable="YES" title="Multiline Label Multiline Label Multiline Label Multiline Label Multiline Label " id="qt8-P9-JrL">
+                            <font key="font" usesAppearanceFont="YES"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                </subviews>
+            </view>
+            <point key="canvasLocation" x="3.5" y="-244.5"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="square.and.arrow.down" catalog="system" width="15" height="16"/>
+        <namedColor name="AccentColor">
+            <color red="0.31400001049041748" green="0.32899999618530273" blue="0.99199998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

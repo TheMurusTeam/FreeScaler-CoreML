@@ -1,0 +1,502 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F214F512935674C000BB676 /* Import.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F214F502935674C000BB676 /* Import.swift */; };
+		3F56540E2936E27000CF6601 /* Custom Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F56540D2936E27000CF6601 /* Custom Models.swift */; };
+		3F5654102936FF8900CF6601 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F56540F2936FF8900CF6601 /* README.md */; };
+		3F7CD6FF293FFA8C00379287 /* FSBatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CD6FB293FFA8C00379287 /* FSBatchViewController.xib */; };
+		3F7CD700293FFA8C00379287 /* FSPreviewWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CD6FC293FFA8C00379287 /* FSPreviewWindowController.swift */; };
+		3F7CD701293FFA8C00379287 /* FSPreviewWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F7CD6FD293FFA8C00379287 /* FSPreviewWindowController.xib */; };
+		3F7CD702293FFA8C00379287 /* FSBatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CD6FE293FFA8C00379287 /* FSBatchViewController.swift */; };
+		3F8FBC9929358885000B72E4 /* Freescaler.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FBC9829358885000B72E4 /* Freescaler.png */; };
+		3F8FBC9C29359AB9000B72E4 /* Global Variables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBC9B29359AB9000B72E4 /* Global Variables.swift */; };
+		3F8FBC9E29359B26000B72E4 /* NSImage Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBC9D29359B26000B72E4 /* NSImage Extension.swift */; };
+		3F8FBCA42935A372000B72E4 /* FSMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA22935A372000B72E4 /* FSMovieViewController.swift */; };
+		3F8FBCA52935A372000B72E4 /* FSMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA32935A372000B72E4 /* FSMovieViewController.xib */; };
+		3F8FBCA72935A533000B72E4 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA62935A533000B72E4 /* Movies.swift */; };
+		3FCA280A29353E03005F9106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA280929353E03005F9106 /* AppDelegate.swift */; };
+		3FCA280C29353E03005F9106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA280B29353E03005F9106 /* Assets.xcassets */; };
+		3FCA280F29353E03005F9106 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA280D29353E03005F9106 /* MainMenu.xib */; };
+		3FCA281A29353E46005F9106 /* realesrgan512.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA281829353E46005F9106 /* realesrgan512.mlmodel */; };
+		3FCA281D29353EB2005F9106 /* Global Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA281C29353EB2005F9106 /* Global Stores.swift */; };
+		3FCA281F29353ED4005F9106 /* GUI funcs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA281E29353ED4005F9106 /* GUI funcs.swift */; };
+		3FCA282129353F0C005F9106 /* Start.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA282029353F0C005F9106 /* Start.swift */; };
+		3FCA282329353FF4005F9106 /* Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA282229353FF4005F9106 /* Version.swift */; };
+		3FCA28252935406A005F9106 /* URL Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA28242935406A005F9106 /* URL Extension.swift */; };
+		3FCA282729354097005F9106 /* DropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA282629354097005F9106 /* DropView.swift */; };
+		3FCA282929354895005F9106 /* Upscaler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA282829354895005F9106 /* Upscaler.swift */; };
+		3FCA282D29354A24005F9106 /* FSImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA282B29354A24005F9106 /* FSImageViewController.swift */; };
+		3FCA282E29354A24005F9106 /* FSImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA282C29354A24005F9106 /* FSImageViewController.xib */; };
+		3FCA283329354C73005F9106 /* FSMainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA283129354C73005F9106 /* FSMainWindowController.swift */; };
+		3FCA283429354C73005F9106 /* FSMainWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA283229354C73005F9106 /* FSMainWindowController.xib */; };
+		D4E5E9C029365F55002A1DC8 /* realesrganAnime512.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = D4E5E9BF29365F55002A1DC8 /* realesrganAnime512.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F214F502935674C000BB676 /* Import.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Import.swift; sourceTree = "<group>"; };
+		3F56540D2936E27000CF6601 /* Custom Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Models.swift"; sourceTree = "<group>"; };
+		3F56540F2936FF8900CF6601 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		3F7CD6FB293FFA8C00379287 /* FSBatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSBatchViewController.xib; sourceTree = "<group>"; };
+		3F7CD6FC293FFA8C00379287 /* FSPreviewWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSPreviewWindowController.swift; sourceTree = "<group>"; };
+		3F7CD6FD293FFA8C00379287 /* FSPreviewWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSPreviewWindowController.xib; sourceTree = "<group>"; };
+		3F7CD6FE293FFA8C00379287 /* FSBatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSBatchViewController.swift; sourceTree = "<group>"; };
+		3F8FBC9829358885000B72E4 /* Freescaler.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Freescaler.png; sourceTree = "<group>"; };
+		3F8FBC9B29359AB9000B72E4 /* Global Variables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Variables.swift"; sourceTree = "<group>"; };
+		3F8FBC9D29359B26000B72E4 /* NSImage Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage Extension.swift"; sourceTree = "<group>"; };
+		3F8FBCA22935A372000B72E4 /* FSMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSMovieViewController.swift; sourceTree = "<group>"; };
+		3F8FBCA32935A372000B72E4 /* FSMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSMovieViewController.xib; sourceTree = "<group>"; };
+		3F8FBCA62935A533000B72E4 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		3FCA280629353E03005F9106 /* FreeScaler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeScaler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FCA280929353E03005F9106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FCA280B29353E03005F9106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FCA280E29353E03005F9106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		3FCA281029353E03005F9106 /* FreeScaler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FreeScaler.entitlements; sourceTree = "<group>"; };
+		3FCA281829353E46005F9106 /* realesrgan512.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realesrgan512.mlmodel; sourceTree = "<group>"; };
+		3FCA281C29353EB2005F9106 /* Global Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Global Stores.swift"; sourceTree = "<group>"; };
+		3FCA281E29353ED4005F9106 /* GUI funcs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GUI funcs.swift"; sourceTree = "<group>"; };
+		3FCA282029353F0C005F9106 /* Start.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Start.swift; sourceTree = "<group>"; };
+		3FCA282229353FF4005F9106 /* Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Version.swift; sourceTree = "<group>"; };
+		3FCA28242935406A005F9106 /* URL Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL Extension.swift"; sourceTree = "<group>"; };
+		3FCA282629354097005F9106 /* DropView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropView.swift; sourceTree = "<group>"; };
+		3FCA282829354895005F9106 /* Upscaler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upscaler.swift; sourceTree = "<group>"; };
+		3FCA282B29354A24005F9106 /* FSImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSImageViewController.swift; sourceTree = "<group>"; };
+		3FCA282C29354A24005F9106 /* FSImageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSImageViewController.xib; sourceTree = "<group>"; };
+		3FCA283129354C73005F9106 /* FSMainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSMainWindowController.swift; sourceTree = "<group>"; };
+		3FCA283229354C73005F9106 /* FSMainWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSMainWindowController.xib; sourceTree = "<group>"; };
+		D4E5E9BF29365F55002A1DC8 /* realesrganAnime512.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = realesrganAnime512.mlmodel; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FCA280329353E03005F9106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F7CD6FA293FFA5D00379287 /* Batch View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CD6FE293FFA8C00379287 /* FSBatchViewController.swift */,
+				3F7CD6FB293FFA8C00379287 /* FSBatchViewController.xib */,
+				3F7CD6FC293FFA8C00379287 /* FSPreviewWindowController.swift */,
+				3F7CD6FD293FFA8C00379287 /* FSPreviewWindowController.xib */,
+			);
+			path = "Batch View Controller";
+			sourceTree = "<group>";
+		};
+		3F8FBC9729358879000B72E4 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FBC9829358885000B72E4 /* Freescaler.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		3F8FBCA12935A348000B72E4 /* Movie View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FBCA22935A372000B72E4 /* FSMovieViewController.swift */,
+				3F8FBCA32935A372000B72E4 /* FSMovieViewController.xib */,
+			);
+			path = "Movie View Controller";
+			sourceTree = "<group>";
+		};
+		3FCA27FD29353E03005F9106 = {
+			isa = PBXGroup;
+			children = (
+				3F56540F2936FF8900CF6601 /* README.md */,
+				3FCA280829353E03005F9106 /* FreeScaler */,
+				3FCA280729353E03005F9106 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3FCA280729353E03005F9106 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA280629353E03005F9106 /* FreeScaler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FCA280829353E03005F9106 /* FreeScaler */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FBC9729358879000B72E4 /* images */,
+				3FCA281629353E2B005F9106 /* Models */,
+				3FCA280929353E03005F9106 /* AppDelegate.swift */,
+				3FCA280B29353E03005F9106 /* Assets.xcassets */,
+				3FCA280D29353E03005F9106 /* MainMenu.xib */,
+				3FCA281029353E03005F9106 /* FreeScaler.entitlements */,
+				3FCA282029353F0C005F9106 /* Start.swift */,
+				3FCA281C29353EB2005F9106 /* Global Stores.swift */,
+				3F8FBC9B29359AB9000B72E4 /* Global Variables.swift */,
+				3FCA281E29353ED4005F9106 /* GUI funcs.swift */,
+				3FCA282229353FF4005F9106 /* Version.swift */,
+				3FCA28242935406A005F9106 /* URL Extension.swift */,
+				3F8FBC9D29359B26000B72E4 /* NSImage Extension.swift */,
+				3FCA282629354097005F9106 /* DropView.swift */,
+				3F214F502935674C000BB676 /* Import.swift */,
+				3FCA282829354895005F9106 /* Upscaler.swift */,
+				3FCA282A29354A00005F9106 /* GUI */,
+				3F8FBCA62935A533000B72E4 /* Movies.swift */,
+			);
+			path = FreeScaler;
+			sourceTree = "<group>";
+		};
+		3FCA281629353E2B005F9106 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA281829353E46005F9106 /* realesrgan512.mlmodel */,
+				D4E5E9BF29365F55002A1DC8 /* realesrganAnime512.mlmodel */,
+				3F56540D2936E27000CF6601 /* Custom Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3FCA282A29354A00005F9106 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				3F7CD6FA293FFA5D00379287 /* Batch View Controller */,
+				3FCA283029354C51005F9106 /* Main Window Controller */,
+				3FCA282F29354C44005F9106 /* Image View Controller */,
+				3F8FBCA12935A348000B72E4 /* Movie View Controller */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		3FCA282F29354C44005F9106 /* Image View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA282B29354A24005F9106 /* FSImageViewController.swift */,
+				3FCA282C29354A24005F9106 /* FSImageViewController.xib */,
+			);
+			path = "Image View Controller";
+			sourceTree = "<group>";
+		};
+		3FCA283029354C51005F9106 /* Main Window Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3FCA283129354C73005F9106 /* FSMainWindowController.swift */,
+				3FCA283229354C73005F9106 /* FSMainWindowController.xib */,
+			);
+			path = "Main Window Controller";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FCA280529353E03005F9106 /* FreeScaler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FCA281329353E03005F9106 /* Build configuration list for PBXNativeTarget "FreeScaler" */;
+			buildPhases = (
+				3FCA280229353E03005F9106 /* Sources */,
+				3FCA280329353E03005F9106 /* Frameworks */,
+				3FCA280429353E03005F9106 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeScaler;
+			productName = FreeScaler;
+			productReference = 3FCA280629353E03005F9106 /* FreeScaler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FCA27FE29353E03005F9106 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					3FCA280529353E03005F9106 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = 3FCA280129353E03005F9106 /* Build configuration list for PBXProject "FreeScaler" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FCA27FD29353E03005F9106;
+			productRefGroup = 3FCA280729353E03005F9106 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FCA280529353E03005F9106 /* FreeScaler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FCA280429353E03005F9106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F7CD701293FFA8C00379287 /* FSPreviewWindowController.xib in Resources */,
+				3FCA280C29353E03005F9106 /* Assets.xcassets in Resources */,
+				3FCA283429354C73005F9106 /* FSMainWindowController.xib in Resources */,
+				3F8FBCA52935A372000B72E4 /* FSMovieViewController.xib in Resources */,
+				3F5654102936FF8900CF6601 /* README.md in Resources */,
+				3F7CD6FF293FFA8C00379287 /* FSBatchViewController.xib in Resources */,
+				3FCA280F29353E03005F9106 /* MainMenu.xib in Resources */,
+				3F8FBC9929358885000B72E4 /* Freescaler.png in Resources */,
+				3FCA282E29354A24005F9106 /* FSImageViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FCA280229353E03005F9106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FCA281A29353E46005F9106 /* realesrgan512.mlmodel in Sources */,
+				3F214F512935674C000BB676 /* Import.swift in Sources */,
+				3FCA281F29353ED4005F9106 /* GUI funcs.swift in Sources */,
+				3FCA282329353FF4005F9106 /* Version.swift in Sources */,
+				3F8FBCA42935A372000B72E4 /* FSMovieViewController.swift in Sources */,
+				3FCA280A29353E03005F9106 /* AppDelegate.swift in Sources */,
+				3F8FBCA72935A533000B72E4 /* Movies.swift in Sources */,
+				D4E5E9C029365F55002A1DC8 /* realesrganAnime512.mlmodel in Sources */,
+				3F56540E2936E27000CF6601 /* Custom Models.swift in Sources */,
+				3FCA282129353F0C005F9106 /* Start.swift in Sources */,
+				3FCA282929354895005F9106 /* Upscaler.swift in Sources */,
+				3F7CD702293FFA8C00379287 /* FSBatchViewController.swift in Sources */,
+				3FCA282D29354A24005F9106 /* FSImageViewController.swift in Sources */,
+				3F8FBC9C29359AB9000B72E4 /* Global Variables.swift in Sources */,
+				3FCA28252935406A005F9106 /* URL Extension.swift in Sources */,
+				3FCA283329354C73005F9106 /* FSMainWindowController.swift in Sources */,
+				3F8FBC9E29359B26000B72E4 /* NSImage Extension.swift in Sources */,
+				3F7CD700293FFA8C00379287 /* FSPreviewWindowController.swift in Sources */,
+				3FCA281D29353EB2005F9106 /* Global Stores.swift in Sources */,
+				3FCA282729354097005F9106 /* DropView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FCA280D29353E03005F9106 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FCA280E29353E03005F9106 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FCA281129353E03005F9106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FCA281229353E03005F9106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3FCA281429353E03005F9106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreeScaler/FreeScaler.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLG254GCK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.murus.FreeScaler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3FCA281529353E03005F9106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FreeScaler/FreeScalerRelease.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = RNLG254GCK;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainNibFile = MainMenu;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = it.murus.FreeScaler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FCA280129353E03005F9106 /* Build configuration list for PBXProject "FreeScaler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FCA281129353E03005F9106 /* Debug */,
+				3FCA281229353E03005F9106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FCA281329353E03005F9106 /* Build configuration list for PBXNativeTarget "FreeScaler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FCA281429353E03005F9106 /* Debug */,
+				3FCA281529353E03005F9106 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FCA27FE29353E03005F9106 /* Project object */;
+}
