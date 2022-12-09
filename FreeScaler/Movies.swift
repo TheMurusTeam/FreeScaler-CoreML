@@ -57,6 +57,7 @@ class VideoConverter : NSObject{
                     audio = true
                     let readerAudioSettings: [String: Any] = [AVFormatIDKey: kAudioFormatLinearPCM]
                      assetReaderAudioOutput = AVAssetReaderTrackOutput(track: assetAudioTrack!, outputSettings: readerAudioSettings)
+                    assetReaderAudioOutput?.alwaysCopiesSampleData = true
                     if assetReader.canAdd(assetReaderAudioOutput!)  {
                         assetReader.add(assetReaderAudioOutput!)
                     }
@@ -99,6 +100,7 @@ class VideoConverter : NSObject{
                 
                 let assetReaderVideoOutput = AVAssetReaderTrackOutput(track: assetVideoTrack, outputSettings: readerVideoSettings)
                 assetReaderVideoOutput.supportsRandomAccess = true
+                assetReaderVideoOutput.alwaysCopiesSampleData = true
                 if assetReader.canAdd(assetReaderVideoOutput) {
                     assetReader.add(assetReaderVideoOutput)
                 }
@@ -137,6 +139,7 @@ class VideoConverter : NSObject{
                             if let sampleBuffer = assetReaderAudioOutput!.copyNextSampleBuffer() {
                                 let presentationTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
                                 print("completato audio:\( presentationTime.seconds)")
+                                while !assetWriterAudioInput!.isReadyForMoreMediaData { usleep(10) }
                                 assetWriterAudioInput!.append(sampleBuffer)
                             } else {
                                 assetWriterAudioInput!.markAsFinished()
@@ -162,19 +165,22 @@ class VideoConverter : NSObject{
                             }
                             
                             if let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
-                                /*if  let bufferupscaled =   Upscaler.shared.predictPixelBuffer(buffer: imageBuffer){
+                                if  let bufferupscaled =   Upscaler.shared.predictPixelBuffer(buffer: imageBuffer){
                                     let frameTime = CMTimeMake(value: Int64(frameCounter), timescale: Int32(framesPerSecond))
                                     ///qui va appsto il frame upscalato
+                                    while !assetWriterVideoInput.isReadyForMoreMediaData { usleep(10) }
                                     assetWriterAdaptor.append(bufferupscaled, withPresentationTime: frameTime)
+                                    frameCounter = frameCounter + 1
                                 } else {
                                     // ERROR
                                     print("ERROR, NO FRAME")
                                     return
-                                }*/
-                                let frameTime = CMTimeMake(value: Int64(frameCounter), timescale: Int32(framesPerSecond))
+                                }
+                               /* let frameTime = CMTimeMake(value: Int64(frameCounter), timescale: Int32(framesPerSecond))
                                 ///qui va appsto il frame upscalato
-                                assetWriterAdaptor.append(imageBuffer, withPresentationTime: frameTime)
-                                frameCounter = frameCounter + 1
+                                while !assetWriterVideoInput.isReadyForMoreMediaData { usleep(10) }
+                                assetWriterAdaptor.append(imageBuffer, withPresentationTime: frameTime)*/
+                               
                                 
                                 
                                 
@@ -196,10 +202,10 @@ class VideoConverter : NSObject{
                                 */
                                 
                             }
-                            
                             if assetReader.status.rawValue != 1 {
-                                usleep(50000)
+                                                         usleep(50000)
                             }
+                            
                             
                         } else {
                             assetWriterVideoInput.markAsFinished()
