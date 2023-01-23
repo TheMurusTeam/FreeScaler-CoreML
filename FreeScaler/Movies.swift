@@ -12,7 +12,7 @@ import AppKit
 
 class VideoConverter : NSObject{
     
-    static let shared = VideoConverter() // Singleton
+    static let shared = VideoConverter()
     private override init() {}
     
     
@@ -30,7 +30,7 @@ class VideoConverter : NSObject{
             do {
                 try FileManager.default.removeItem(atPath: urlOutput.path)
             } catch {
-                fatalError("")
+                fatalError("file not found")
             }
         }
         
@@ -123,11 +123,11 @@ class VideoConverter : NSObject{
                 
                 // MARK: - Upscale
                 guard assetReader.startReading() else {
-                    completion("meh")
+                    completion("error")
                     return
                 }
                 guard assetWriter.startWriting() else {
-                    completion("meh")
+                    completion("error")
                     return
                 }
                 
@@ -138,7 +138,7 @@ class VideoConverter : NSObject{
                         while assetWriterAudioInput!.isReadyForMoreMediaData {
                             if let sampleBuffer = assetReaderAudioOutput!.copyNextSampleBuffer() {
                                 let presentationTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
-                                print("completato audio:\( presentationTime.seconds)")
+                                //print("completato audio:\( presentationTime.seconds)")
                                 while !assetWriterAudioInput!.isReadyForMoreMediaData { usleep(10) }
                                 assetWriterAudioInput!.append(sampleBuffer)
                             } else {
@@ -157,7 +157,7 @@ class VideoConverter : NSObject{
                     while assetWriterVideoInput.isReadyForMoreMediaData {
                         if let sampleBuffer = assetReaderVideoOutput.copyNextSampleBuffer() {
                             let presentationTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
-                            print("completato video:\( presentationTime.seconds)")
+                            //print("completato video:\( presentationTime.seconds)")
                             
                             DispatchQueue.main.async {
                                 (viewCtrl["single"] as? FSMovieViewController)?.timelabel.doubleValue = presentationTime.seconds
@@ -173,7 +173,7 @@ class VideoConverter : NSObject{
                                     frameCounter = frameCounter + 1
                                 } else {
                                     // ERROR
-                                    print("ERROR, NO FRAME")
+                                    //print("ERROR, NO FRAME")
                                     return
                                 }
                                /* let frameTime = CMTimeMake(value: Int64(frameCounter), timescale: Int32(framesPerSecond))
@@ -218,8 +218,8 @@ class VideoConverter : NSObject{
                 
                 dispatchGroup.notify(queue: mainQueue, work: DispatchWorkItem {
                     assetWriter.finishWriting {
-                        print("Done")
-                        completion("yessa")
+                        //print("Done")
+                        completion("done")
                     }
                 })
             }

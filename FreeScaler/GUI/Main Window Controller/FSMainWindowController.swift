@@ -34,13 +34,13 @@ class FSMainWindowController: NSWindowController {
         self.droplabelview.layer?.borderWidth = 1
         self.droplabelview.layer?.borderColor = NSColor.tertiaryLabelColor.cgColor
         self.droplabelview.layer?.masksToBounds = true
-        // setup model at start
+        // setup upscale model at start
         print("setting up model at start...")
         self.setupModelFromPath(path: selectedModelPath)
         
     }
     
-    
+     
     // MARK: SetUp CoreML Model
     
     func setupModelFromPath(path:String) {
@@ -51,7 +51,7 @@ class FSMainWindowController: NSWindowController {
         
         // load model
         DispatchQueue.global().async {
-            Upscaler.shared.setupModelFromPath(path: path)
+            Upscaler.shared.setupUpscaleModelFromPath(path: path)
             DispatchQueue.main.async {
                 self.window?.endSheet(self.waitwin)
             }

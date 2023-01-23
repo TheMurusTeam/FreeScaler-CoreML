@@ -94,7 +94,7 @@ class FSBatchViewController: NSViewController,NSSharingServicePickerDelegate, NS
         
         // model popup update when importing a new custom CoreML model
         notificationcenter.addObserver(self, selector: #selector(self.updateModelPopupAndSetupNewModel(_:)), name: NSNotification.Name(rawValue:"newcustommodel"), object: nil)
-        // progress view
+        // progress view 
         self.progrview.wantsLayer = true
         self.progrview.canDrawSubviewsIntoLayer = true
         self.progrview.layer?.cornerRadius = 16.0
@@ -640,7 +640,7 @@ class FSBatchViewController: NSViewController,NSSharingServicePickerDelegate, NS
 func imageInfoFromFile(image:NSImage?, to size: NSSize) -> (NSSize,NSImage)? {
     if let photo = image {
         let originalSize = photo.size
-        if originalSize.width > 3840 || originalSize.height > 2160 {
+        if originalSize.width > 7200 || originalSize.height > 4300 {
             return nil // image too big
         }
         let ratio = photo.size.width > photo.size.height ? size.width / photo.size.width : size.height / photo.size.height

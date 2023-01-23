@@ -17,7 +17,7 @@ import Accelerate
 
 class Upscaler : NSObject {
     
-    static let shared = Upscaler() // Singleton
+    static let shared = Upscaler() 
     private override init() {}
     
     let conf = MLModelConfiguration()
@@ -30,14 +30,14 @@ class Upscaler : NSObject {
     
     // MARK: Setup CoreML Model
     
-    func setupModelFromPath(path:String, _ cUnits:MLComputeUnits? = nil) {
+    func setupUpscaleModelFromPath(path:String, _ cUnits:MLComputeUnits? = nil) {
         print("setting up CoreML model from path \(path)")
         self.conf.allowLowPrecisionAccumulationOnGPU = true
         
         // compute units
         var aneOption : MLComputeUnits = .all
         if #available(macOS 13.0, *) {
-           // aneOption = .cpuAndNeuralEngine
+            aneOption = .cpuAndNeuralEngine
         }
         self.conf.computeUnits = cUnits ?? (useNeuralEngine ? aneOption : .cpuAndGPU)
         
@@ -52,7 +52,10 @@ class Upscaler : NSObject {
             UserDefaults.standard.set(path, forKey: "selectedModelPath")
             
         } else {
-            fatalError()
+            let alert = NSAlert()
+            alert.messageText = "Invalid model"
+            alert.informativeText = "Unable to use model from \(path)\n\n"
+            alert.runModal()
         }
     }
 

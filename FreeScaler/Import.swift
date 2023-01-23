@@ -5,14 +5,14 @@
 //  Created by Hany El Imam on 28/11/22.
 //
 
-import Foundation
+import Foundation 
 import Cocoa
 
 
 func importImage(path:String) {
     if let image = NSImage(contentsOf: URL(fileURLWithPath: path)) {
         // CHECK IMAGE SIZE
-        if image.size.width > 3840 || image.size.height > 2160 {
+        if image.size.width > 7200 || image.size.height > 4300 {
             // ERROR, TOO BIG
             let alert = NSAlert()
             alert.messageText = "Unable to import image"

@@ -8,7 +8,7 @@
 import Foundation
 
 // current model path
-var selectedModelPath = String()
+var selectedModelPath = (Bundle.main.path(forResource: "realesrgan512", ofType: "mlmodelc")!)
 
 // use ANE
 var useNeuralEngine : Bool = true

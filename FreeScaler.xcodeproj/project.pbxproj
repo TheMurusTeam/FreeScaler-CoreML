@@ -20,6 +20,8 @@
 		3F8FBCA42935A372000B72E4 /* FSMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA22935A372000B72E4 /* FSMovieViewController.swift */; };
 		3F8FBCA52935A372000B72E4 /* FSMovieViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA32935A372000B72E4 /* FSMovieViewController.xib */; };
 		3F8FBCA72935A533000B72E4 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FBCA62935A533000B72E4 /* Movies.swift */; };
+		3FA36193294A3E3A000A4B01 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FA36192294A3E3A000A4B01 /* Info.plist */; };
+		3FA36195294A3E7D000A4B01 /* Service Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA36194294A3E7D000A4B01 /* Service Provider.swift */; };
 		3FCA280A29353E03005F9106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCA280929353E03005F9106 /* AppDelegate.swift */; };
 		3FCA280C29353E03005F9106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA280B29353E03005F9106 /* Assets.xcassets */; };
 		3FCA280F29353E03005F9106 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FCA280D29353E03005F9106 /* MainMenu.xib */; };
@@ -52,6 +54,8 @@
 		3F8FBCA22935A372000B72E4 /* FSMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSMovieViewController.swift; sourceTree = "<group>"; };
 		3F8FBCA32935A372000B72E4 /* FSMovieViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FSMovieViewController.xib; sourceTree = "<group>"; };
 		3F8FBCA62935A533000B72E4 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		3FA36192294A3E3A000A4B01 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA36194294A3E7D000A4B01 /* Service Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Service Provider.swift"; sourceTree = "<group>"; };
 		3FCA280629353E03005F9106 /* FreeScaler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeScaler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FCA280929353E03005F9106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FCA280B29353E03005F9106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		3FCA280829353E03005F9106 /* FreeScaler */ = {
 			isa = PBXGroup;
 			children = (
+				3FA36192294A3E3A000A4B01 /* Info.plist */,
 				3F8FBC9729358879000B72E4 /* images */,
 				3FCA281629353E2B005F9106 /* Models */,
 				3FCA280929353E03005F9106 /* AppDelegate.swift */,
@@ -149,6 +154,7 @@
 				3FCA282829354895005F9106 /* Upscaler.swift */,
 				3FCA282A29354A00005F9106 /* GUI */,
 				3F8FBCA62935A533000B72E4 /* Movies.swift */,
+				3FA36194294A3E7D000A4B01 /* Service Provider.swift */,
 			);
 			path = FreeScaler;
 			sourceTree = "<group>";
@@ -166,8 +172,8 @@
 		3FCA282A29354A00005F9106 /* GUI */ = {
 			isa = PBXGroup;
 			children = (
-				3F7CD6FA293FFA5D00379287 /* Batch View Controller */,
 				3FCA283029354C51005F9106 /* Main Window Controller */,
+				3F7CD6FA293FFA5D00379287 /* Batch View Controller */,
 				3FCA282F29354C44005F9106 /* Image View Controller */,
 				3F8FBCA12935A348000B72E4 /* Movie View Controller */,
 			);
@@ -258,6 +264,7 @@
 				3F7CD6FF293FFA8C00379287 /* FSBatchViewController.xib in Resources */,
 				3FCA280F29353E03005F9106 /* MainMenu.xib in Resources */,
 				3F8FBC9929358885000B72E4 /* Freescaler.png in Resources */,
+				3FA36193294A3E3A000A4B01 /* Info.plist in Resources */,
 				3FCA282E29354A24005F9106 /* FSImageViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +278,7 @@
 			files = (
 				3FCA281A29353E46005F9106 /* realesrgan512.mlmodel in Sources */,
 				3F214F512935674C000BB676 /* Import.swift in Sources */,
+				3FA36195294A3E7D000A4B01 /* Service Provider.swift in Sources */,
 				3FCA281F29353ED4005F9106 /* GUI funcs.swift in Sources */,
 				3FCA282329353FF4005F9106 /* Version.swift in Sources */,
 				3F8FBCA42935A372000B72E4 /* FSMovieViewController.swift in Sources */,
@@ -425,10 +433,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = FreeScaler/FreeScaler.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RNLG254GCK;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = RNLG254GCK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -439,9 +449,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = "2.0 beta";
 				PRODUCT_BUNDLE_IDENTIFIER = it.murus.FreeScaler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "FreeScaler DeveloperID";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -452,11 +465,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = FreeScaler/FreeScalerRelease.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = FreeScaler/FreeScaler.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RNLG254GCK;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = RNLG254GCK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.photography";
@@ -467,9 +482,12 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MARKETING_VERSION = "2.0 beta";
 				PRODUCT_BUNDLE_IDENTIFIER = it.murus.FreeScaler;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "FreeScaler DeveloperID";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
